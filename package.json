@@ -1,0 +1,15 @@
+{
+  "name": "webrtc-tutorial",
+  "version": "0.0.1",
+  "description": "webrtc-webpack-tuto",
+  "scripts": {
+    "start": "node scripts/start"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "webpack": "^5.72.0"
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^5.5.0"
+  }
+}
