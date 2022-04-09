@@ -11,13 +11,26 @@ process.on('unhandledRejection', err => {
 });
 
 const { webpack } = require('webpack');
+const WebpackDevServer = require('webpack-dev-server');
 const configFactory = require('../config/webpack.config');
+
+const host = process.env.HOST ?? '0.0.0.0';
+const port = process.env.PORT ?? 5000;
 
 const config = configFactory('devlopment');
 const compiler = webpack(config);
 
-compiler.run((err, stat) => {
-  if (err) {
-    console.log(err);
-  }
-});
+const server = new WebpackDevServer({
+  port, host
+}, compiler);
+
+server.startCallback(()=> {
+  console.log(`Starting server on http://${host}:${port}`);
+})
+
+// compiler.run((err, stat) => {
+//   if (err) {
+//     console.log(err);
+//   }
+//   process.exit(1);
+// });
