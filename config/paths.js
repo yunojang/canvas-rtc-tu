@@ -6,5 +6,6 @@ const resolveApp = relativePath => path.resolve(appDirectory, relativePath);
 
 module.exports = {
   appPath: resolveApp('.'),
-  appIndex: resolveApp('src/index.ts')
-}
+  appIndex: resolveApp('src/index.ts'),
+  appPublic: resolveApp('public'),
+};

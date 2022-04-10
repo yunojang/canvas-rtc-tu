@@ -3,13 +3,19 @@
   "version": "0.0.1",
   "description": "webrtc-webpack-tuto",
   "scripts": {
-    "start": "node scripts/start"
+    "start": "node scripts/start",
+    "build": "node scripts/build",
+    "webpack": "webpack --mode=development"
   },
   "license": "MIT",
   "dependencies": {
     "webpack": "^5.72.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.17.9",
+    "@babel/preset-typescript": "^7.16.7",
+    "babel-loader": "^8.2.4",
+    "chalk": "^5.0.1",
     "html-webpack-plugin": "^5.5.0",
     "webpack-dev-server": "^4.8.1"
   }
