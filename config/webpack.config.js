@@ -13,7 +13,11 @@ module.exports = webpackEnv => {
       path: path.resolve(paths.appPath, 'dist'),
       filename: 'app.js',
     },
-    plugins: [new HTMLWbpackPlugin()],
+    plugins: [
+      new HTMLWbpackPlugin({
+        template: paths.appIndex,
+      }),
+    ],
     module: {
       rules: [
         {
@@ -24,6 +28,12 @@ module.exports = webpackEnv => {
             options: {
               presets: ['@babel/preset-typescript'],
             },
+          },
+        },
+        {
+          test: /\.html$/i,
+          use: {
+            loader: 'html-loader',
           },
         },
       ],
