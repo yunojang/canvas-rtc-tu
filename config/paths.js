@@ -8,5 +8,5 @@ module.exports = {
   appPath: resolveApp('.'),
   appIndex: resolveApp('src/index.ts'),
   appPublic: resolveApp('public'),
-  appIndex: resolveApp('public/index.html'),
+  appHtml: resolveApp('public/index.html'),
 };

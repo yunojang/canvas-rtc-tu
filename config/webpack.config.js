@@ -15,7 +15,7 @@ module.exports = webpackEnv => {
     },
     plugins: [
       new HTMLWbpackPlugin({
-        template: paths.appIndex,
+        template: paths.appHtml,
       }),
     ],
     module: {

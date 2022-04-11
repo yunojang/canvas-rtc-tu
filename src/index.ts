@@ -1,6 +1,4 @@
-console.log('log');
+let x= 10;
+console.log(x); 
 
-enum Status {
-  USER,
-  ADMIN,
-}
+const canvas = document.getElementById('canvas');

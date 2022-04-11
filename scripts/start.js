@@ -24,9 +24,6 @@ const compiler = webpack(config);
 const devServerOptions = {
   port,
   host,
-  static: {
-    // directory: paths.appPublic,
-  },
 };
 
 const server = new WebpackDevServer(devServerOptions, compiler);
