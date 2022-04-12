@@ -38,6 +38,9 @@ module.exports = webpackEnv => {
         },
       ],
     },
+    resolve: {
+      extensions: [".ts", ".js"]
+    }
   };
 
   return config;

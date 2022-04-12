@@ -1,4 +1,4 @@
-let x= 10;
-console.log(x); 
+import { app } from './app';
 
-const canvas = document.getElementById('canvas');
+const canvas = document.getElementById('canvas') as HTMLCanvasElement;
+app();
