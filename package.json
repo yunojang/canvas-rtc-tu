@@ -4,8 +4,7 @@
   "description": "webrtc-webpack-tuto",
   "scripts": {
     "start": "node scripts/start",
-    "build": "node scripts/build",
-    "webpack": "webpack --mode=development"
+    "build": "node scripts/build"
   },
   "license": "MIT",
   "dependencies": {

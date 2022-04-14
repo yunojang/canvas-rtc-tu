@@ -8,10 +8,12 @@ module.exports = webpackEnv => {
 
   const config = {
     mode: isEnvDevelopment ? 'development' : 'production',
-    entry: paths.appIndex,
+    entry: {
+      index: paths.appIndex
+    },
     output: {
       path: path.resolve(paths.appPath, 'dist'),
-      filename: 'app.js',
+      filename: '[name].bundle.js',
     },
     plugins: [
       new HTMLWbpackPlugin({
@@ -31,7 +33,7 @@ module.exports = webpackEnv => {
           },
         },
         {
-          test: /\.html$/i,
+          test: /\.html$/,
           use: {
             loader: 'html-loader',
           },
